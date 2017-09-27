@@ -1,6 +1,8 @@
 var helper = require(__dirname + '/test-helper');
 var util = require('util');
 
+if(helper.config.native) return;
+
 test('error during query execution', function() {
   var client = new Client(helper.args);
   client.connect(assert.success(function() {
@@ -37,8 +39,6 @@ test('error during query execution', function() {
     }));
   }));
 });
-
-if(helper.config.native) return;
 
 test('9.3 column error fields', function() {
   var client = new Client(helper.args);

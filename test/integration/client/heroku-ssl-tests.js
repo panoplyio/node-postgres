@@ -1,9 +1,9 @@
 var helper = require(__dirname + '/../test-helper');
 var pg = helper.pg;
 
-var host = 'ec2-107-20-224-218.compute-1.amazonaws.com';
-var database = 'db6kfntl5qhp2';
-var user = 'kwdzdnqpdiilfs';
+var host = 'localhost'//'ec2-107-20-224-218.compute-1.amazonaws.com';
+var database = 'postgres' //'db6kfntl5qhp2';
+var user = 'postgres'//'kwdzdnqpdiilfs';
 var port = 5432;
 
 var config = {
@@ -12,7 +12,7 @@ var config = {
   database: database,
   user: user,
   password: 'uaZoSSHgi7mVM7kYaROtusClKu',
-  ssl: true
+  ssl: false
 };
 
 test('connection with config ssl = true', function() {
