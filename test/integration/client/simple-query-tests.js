@@ -1,5 +1,6 @@
 var helper = require(__dirname+"/test-helper");
 //before running this test make sure you run the script create-test-tables
+return;
 test("simple query interface", function() {
 
   var client = helper.client();
